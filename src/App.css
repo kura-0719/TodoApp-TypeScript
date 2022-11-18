@@ -7,13 +7,60 @@
   height: 100vh;
 }
 
+.title {
+  text-align: center;
+  margin-top: 10vh;
+  font-size: 60px;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
 .inputText {
+  width: 100%;
+  font-size: 20px;
   padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 2px #25A69A solid;
+}
+
+.listInputText {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 2px rgb(172, 172, 172) solid;
+  margin-right: 300%;
+}
+
+.addForm {
+  width: 40%;
+  margin-top: 200px;
+}
+
+.todoList {
+  margin-top: 80px;
 }
 
 .submitButton {
+  display: block;
+  width: fit-content;
+  margin: 40px auto;
   padding: 8px 15px;
   cursor: pointer;
+  background-color: #25A69A;
+  color:  #fff;
+  border-color: #25A69A;
+}
+
+.deleteButton {
+  background-color: #25A69A;
+  border-color: #25A69A;
+  color: #fff;
 }
 
 .todoList li {

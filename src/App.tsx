@@ -33,7 +33,7 @@ function App() {
   const handleEdit = (id: number, inputValue: string) => {
     const newTodos = todos.map((todo) => {
       if (todo.id === id) {
-        todo.checked =! todo.checked;
+        todo.checked = !todo.checked;
       }
       return todo;
     });
@@ -58,16 +58,16 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div>
-        <h2>Todoリスト</h2>
-        <form onSubmit={(e) => handleSubmit(e)}>
+    <div>
+      <div className="title">Todo List</div>
+      <div className="main">
+        <form  className="addForm" onSubmit={(e) => handleSubmit(e)}>
           <input
             type="text"
             onChange={(e) => handleChange(e)}
             className="inputText"
           />
-          <input type="submit" value="作成" className="submitButton" />
+          <input type="submit" value="ADD" className="submitButton" />
         </form>
         <ul className="todoList">
           {todos.map((todo) => (
@@ -75,7 +75,7 @@ function App() {
               <input
                 type="text"
                 onChange={(e) => handleEdit(todo.id, e.target.value)}
-                className="inputText"
+                className="listInputText"
                 value={todo.inputValue}
                 disabled={todo.checked}
               />
@@ -83,7 +83,7 @@ function App() {
                 type="checkbox"
                 onChange={(e) => handleChecked(todo.id, todo.checked)}
               />
-              <button onClick={() => handleDelete(todo.id)}>消</button>
+              <button className="deleteButton" onClick={() => handleDelete(todo.id)}>消</button>
             </li>
           ))}
         </ul>
